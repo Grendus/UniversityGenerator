@@ -1,0 +1,251 @@
+{
+	"die_size":100,
+	"course_list":
+	[
+		((1,4),"Sword"),
+		((5,8),"Ax/Club/Mace"),
+		((9,11),"Pole Weapons"),
+		((12,13),
+			{
+			"die_size":10,
+			"course_list":
+				[
+				((1,1),"Roll Twice"),
+				((2,2),"Boomerang"),
+				((3,3),"Bola"),
+				((4,4),"Sha-Ken"),
+				((5,5),"Cestus"),
+				((6,6),"QuarterStaff"),
+				((7,7),"Lasso"),
+				((8,8),"Whip"),
+				((9,9),"Nunchuks"),
+				((10,10),"Blowgun")
+				]
+			}
+		),
+		((14,17),"Thrown Weapons"),
+		((18,21),"Drawn Bows"),
+		((22,24),"Crossbows"),
+		((25,26),"Lightning Bolt"),
+		((27,28),"Ether Arrow"),
+		((29,30),"Ice Ball"),
+		((31,32),"Fireball"),
+		((33,34),"Boulder"),
+		((35,36),
+			{
+			"die_size":4,
+			"course_list":
+				[
+				((1,3),"Aid"),
+				((4,4),"Aid/Drain")
+				]
+			}
+		),
+		((37,40),"Animal Handler"),
+		((41,43),"Armor"),
+		((44,45),
+			{
+			"die_size":4,
+			"course_list":
+				[
+				((1,3),"Avert"),
+				((4,4),"Avert/Attract")
+				]
+			}
+		),
+		((46,47),"Beacon"),
+		((48,49),"Chemist"),
+		((50,51),"Control Animal"),
+		((52,53),
+			{
+			"die_size":4,
+			"course_list":
+				[
+				((1,3),"Create Fire"),
+				((4,4),"Create/Destroy Fire")
+				]
+			}
+		),
+		((54,55),
+			{
+			"die_size":4,
+			"course_list":
+				[
+				((1,3),"Create Fire"),
+				((4,4),"Create/Destroy Fire")
+				]
+			}
+		),
+		((56,57),
+			{
+			"die_size":4,
+			"course_list":
+				[
+				((1,3),"Create Wall"),
+				((1,3),"Create/Destroy Wall")
+				]
+			}
+		),
+		((58,59),
+			{
+			"die_size":4,
+			"course_list":
+				[
+				((1,3),"Create Artifact"),
+				((4,4),"Destroy Artifact")
+				]
+			}
+		),
+		((60,61),
+			{
+			"die_size":4,
+			"course_list":
+				[
+				((1,3), "Flight/Swim"),
+				((4,4), "Ground")
+				]
+			}
+		),
+		((62,64),"Healing"),
+		((65,67),"Leadership"),
+		((68,70),"Literacy"),
+		((71,72),
+			{
+			"die_size":4,
+			"course_list":
+				[
+				((1,3),"Lock"),
+				((4,4),"Knock")
+				]
+			}
+		),
+		((73,74),"Physical Fitness"),
+		((75,77),"Physicker"),
+		((78,79),
+			{
+			"die_size":2,
+			"course_list":
+				[
+				((1,1),
+					{
+					"die_size":4,
+					"course_list":
+						[
+						((1,1),"Proof: Ice"),
+						((2,2),"Proof: Water"),
+						((3,3),"Proof: Fire"),
+						((4,4),"Proof: Electricity")
+						]
+					}
+				),
+				((2,2),
+					{
+					"die_size":4,
+					"course_list":
+						[
+						((1,1),"Sensitize: Ice"),
+						((2,2),"Sensitize: Water"),
+						((3,3),"Sensitize: Fire"),
+						((4,4),"Sensitize: Electricity")
+						]
+					}
+				)
+				]
+			}
+		),
+		((80,81),
+			{
+			"die_size":4,
+			"course_list":
+				[
+				((1,3),"Rope"),
+				((4,4),"Rope/Untie")
+				]
+			}
+		)
+		((82,83),
+			{
+			"die_size":4,
+			"course_list":
+				[
+				((1,3),"Sleep"),
+				((4,4),"Sleep/Awake")
+				]
+			}
+		),
+		((84,85),
+			{
+			"die_size":4,
+			"course_list":
+				[
+				((1,3),"Speed")
+				((4,4),"Slow")
+				]
+			}
+		),
+		((86,87),"Stealth"),
+		((88,89),"Stone Flesh"),
+		((90,91),
+			{
+			"die_size":2,
+			"course_list":
+				[
+				((1,1),
+					{
+					"die_size":4,
+					"course_list":
+						[
+						((1,1),"Ice Storm"),
+						((2,2),"Water Storm"),
+						((3,3),"Fire Storm"),
+						((4,4),"Electrical Storm")
+						]
+					}
+				),
+				((2,2),
+					{
+					"die_size":4,
+					"course_list":
+						[
+						((1,1),"Calm Ice Storm"),
+						((2,2),"Calm Water Storm"),
+						((3,3),"Calm Fire Storm"),
+						((4,4),"Calm Electrical Storm")
+						]
+					}
+				)
+				]
+			}
+		),
+		((92,94),
+			{
+			"die_size":4,
+			"course_list":
+				[
+				((1,3),"Summon"),
+				((4,4),"Summon/Release")
+				]
+			}
+		((95,96),
+			{
+			"die_size":4,
+			"course_list":
+				[
+				((1,3),"Teleport"),
+				((4,4),"Recall")
+				]
+			}
+		),
+		((97,98),"Unarmed Combat"),
+		((99,100),
+			{
+			"die_size":4,
+			"course_list":
+				[
+				((1,3),"Vision"),
+				((4,4),"Blind")
+				]
+			}
+		)
+	]
+}

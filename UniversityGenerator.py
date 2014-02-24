@@ -1,6 +1,7 @@
 import ast
 import sqlite3
 import os
+import controller
 
 verbose = False
 
@@ -19,19 +20,16 @@ def createUniversity():
             print "\nI'm sorry, I didn't quite catch that.\n"
         if classrange != ('',''):
             break
-    conn = sqlite3.connect("universities/%s"%name)
-    c = conn.cursor()
-    c.execute("CREATE TABLE University_Data (name TEXT, min INTEGER, max INTEGER, current_week INTEGER)")
-    c.execute("INSERT INTO University_Data VALUES (?,?,?,?)",(name, classrange[0], classrange[1], 1))
-    conn.commit()
-    conn.close()
-    viewUniversity(name)
+    if controller.createUniversity(name, classrange):
+        viewUniversity(name)
+    else:
+        print "Error: unable to create town."
     
     
 def viewUniversity(name=None):
     print "\n\n"
     if name == None:
-        universities = os.listdir("%s/universities"%os.getcwd())
+        universities = controller.listUniversities()
         while name == None:
             print "Which university would you like to view?"
             for x in range(len(universities)):
@@ -44,9 +42,29 @@ def viewUniversity(name=None):
             except (TypeError, IndexError, ValueError):
                 name == None
                 print "\nI'm sorry, I didn't quite catch that\n"
-    conn = sqlite3.connect("universities/%s"%name)
-    c = conn.cursor()
-                
+
+    print "\n\nUniversity loaded successfully!\n\n\n\n\n"
+
+    while True:
+        choice=raw_input("Would you like to (v)iew the current weak, view a (p)revious week, generate the (n)ext week, or (r)eturn to the main menu?\n")
+        try:
+            if choice == "v":
+                printWeek(controller.getCurrentWeekCourses(name, controller.currentWeek(name)))
+            elif choice == "p":
+                currentWeek = controller.currentWeek(name)
+                week = int(raw_input("\n\nCurrent week is %i. Which week would you like to view?\n"%currentWeek))
+                printWeek(controller.getWeekCourses(name, week))
+            elif choice == "n":
+                controller.generateWeek(name)
+            elif choice == "r":
+                return
+            else:
+                print "\nI'm sorry, I didn't quite catch that\n"
+        except ValueError:
+            print "\nOops, something unexpected happened. Please try again.\n\n"
+
+def printWeek(week):
+    pass
 
 def deleteUniversity(name=None):
     pass
